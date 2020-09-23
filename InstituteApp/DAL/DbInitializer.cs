@@ -45,7 +45,7 @@ namespace InstituteApp.DAL
             {
                 if (_departments != null)
                 {
-                    return _departments;
+                    return _departments;//
                 }
 
                 var deptList = new[]
