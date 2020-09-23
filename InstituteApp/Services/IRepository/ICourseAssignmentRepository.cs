@@ -8,6 +8,6 @@ namespace InstituteApp.Services
     public interface ICourseAssignmentRepository : IRepository<CourseAssignment>
 
     {
-        Task<List<CourseAssignment>> CoursesToInstructorAsync(int id);
+        Task<List<CourseAssignment>> CoursesToInstructorAsync(int id);//
     }
 }
