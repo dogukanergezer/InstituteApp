@@ -19,6 +19,7 @@ namespace InstituteApp.Controllers
 
         public IActionResult Index()
         {
+            //
 
             //// Method Syntax
             //var allCourse = _context.Courses.Include(x=>x.Department).ToList();

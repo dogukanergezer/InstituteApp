@@ -8,7 +8,7 @@ namespace InstituteApp.DAL
     {
         public void Configure(EntityTypeBuilder<Course> builder)
         {
-            builder.HasKey(k => k.Id);
+            builder.HasKey(k => k.Id);//
             builder.Property(p => p.Id).ValueGeneratedOnAdd();
             builder.Property(p => p.Credits).IsRequired();
 
