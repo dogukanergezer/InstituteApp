@@ -5,6 +5,6 @@ namespace InstituteApp.Services.IRepository
 {
     public interface ICourseRepository : IRepository<Course>
     {
-        IEnumerable<Course> CoursesToDepartment();
+        IEnumerable<Course> CoursesToDepartment();//
     }
 }
