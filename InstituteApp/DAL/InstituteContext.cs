@@ -1,11 +1,12 @@
 ﻿using InstituteApp.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace InstituteApp.DAL
 {
-    public class InstituteContext : DbContext
-    /*:IdentityDbContext*/
+    public class InstituteContext : IdentityDbContext
     {
+
         public DbSet<Course> Courses { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Student> Students { get; set; }
@@ -31,5 +32,6 @@ namespace InstituteApp.DAL
             modelBuilder.ApplyConfiguration(new OfficeAssignmentConfig());
 
         }
+
     }
 }

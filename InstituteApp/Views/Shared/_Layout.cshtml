@@ -1,7 +1,7 @@
-﻿@*@using Microsoft.AspNetCore.Identity*@
+﻿@using Microsoft.AspNetCore.Identity
 <!DOCTYPE html>
-@*@inject SignInManager<IdentityUser> SignInManager;
-    @inject UserManager<IdentityUser> UserManager;*@
+@inject SignInManager<IdentityUser> SignInManager;
+@inject UserManager<IdentityUser> UserManager;
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -35,10 +35,8 @@
                 <li class="nav-item active">
                     <a class="nav-link" asp-area="" asp-controller="Instructors" asp-action="Index">Instructors <span class="sr-only">(current)</span></a>
                 </li>
-                @*
 
-
-                    @if (User.IsInRole("Admin"))
+                @*@if (User.IsInRole("Admin"))
                     {
                         <li class="nav-item active">
                             <a class="nav-link" asp-area="" asp-controller="Role" asp-action="Index">Roles <span class="sr-only">(current)</span></a>
@@ -48,36 +46,32 @@
                         </li>
                     }*@
 
-
-
             </ul>
 
-            @*@if (!SignInManager.IsSignedIn(User))
-                {
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Login">Login <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link" asp-area="" asp-controller="Account" asp-action="Register">Register <span class="sr-only">(current)</span></a>
-                        </li>
-                    </ul>
-                }
-                else
-                {
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item ">
-                            <i class="nav-link">
-                                @User.Identity.Name
-                            </i>
-                        </li>
-                        <li class="nav-item active">
-                            <form class="nav-link" asp-controller="Account" asp-action="Logout">
-                                <input type="submit" class="btn btn-sm btn-outline-success" value="Logout" />
-                            </form>
-                        </li>
-                    </ul>
-                }*@
+            @if (!SignInManager.IsSignedIn(User))
+            {
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item active">
+        <a class="nav-link" asp-area="" asp-controller="Accounts" asp-action="Login">Login <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" asp-area="" asp-controller="Accounts" asp-action="Register">Register <span class="sr-only">(current)</span></a>
+    </li>
+</ul> }
+else
+{
+<ul class="navbar-nav ml-auto">
+    <li class="nav-item ">
+        <i class="nav-link">
+            @User.Identity.Name
+        </i>
+    </li>
+    <li class="nav-item active">
+        <form class="nav-link" asp-controller="Accounts" asp-action="Logout">
+            <input type="submit" class="btn btn-sm btn-outline-success" value="Logout" />
+        </form>
+    </li>
+</ul>       }
         </div>
     </nav>
 
@@ -93,18 +87,3 @@
         @RenderSection("Scripts", required: false)*@
 </body>
 </html>
-
-@*<ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-            <i class="nav-link">
-                @User.Identity.Name
-            </i>
-        </li>
-        <li class="nav-item active">
-            <form class="nav-link" asp-controller="Account" asp-action="Logout">
-                <input type="submit" class="btn btn-outline-success" value="Logout" />
-
-            </form>
-        </li>
-
-    </ul>*@
