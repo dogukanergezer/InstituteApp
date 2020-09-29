@@ -57,10 +57,10 @@ namespace InstituteApp
             });
 
 
-            //services.AddAuthorization(options =>
-            //{
-            //    options.AddPolicy("OnlyAdmin", policy => policy.RequireRole("Admin"));
-            //});
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("OnlyAdmin", policy => policy.RequireRole("Admin"));
+            });
 
         }
 

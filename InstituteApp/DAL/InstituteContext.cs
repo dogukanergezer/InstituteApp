@@ -1,6 +1,7 @@
 ﻿using InstituteApp.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using InstituteApp.ViewModels;
 
 namespace InstituteApp.DAL
 {
@@ -32,6 +33,7 @@ namespace InstituteApp.DAL
             modelBuilder.ApplyConfiguration(new OfficeAssignmentConfig());
 
         }
+        public DbSet<InstituteApp.ViewModels.UserViewModel> UserViewModel { get; set; }
 
     }
 }
