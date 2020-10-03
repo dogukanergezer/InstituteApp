@@ -1,4 +1,4 @@
-##InstituteApp
+## InstituteApp
 
 - Institute system built with ASP.NET Core </br>
 
