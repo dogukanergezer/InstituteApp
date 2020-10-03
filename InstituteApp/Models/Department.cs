@@ -10,7 +10,7 @@ namespace InstituteApp.Models
         public string DepartmentName { get; set; }
         public decimal Budget { get; set; }
 
-        public int? InstructorId { get; set; } //Bölüm yöneticisi olabilir olmaya da bilir.
+        public int? InstructorId { get; set; } //It may or may not be a department manager.
         [Display(Name = "Administrator")]
         public Instructor Instructor { get; set; }
 
